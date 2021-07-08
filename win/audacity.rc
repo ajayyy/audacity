@@ -5,7 +5,7 @@ AudacityLogo ICON "audacity.ico"
 #endif
 
 #include <winuser.h>
-CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Audacity.exe.manifest"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Tenacity.exe.manifest"
 
 #include "wx/msw/wx.rc"
 /////////////////////////////////////////////////////////////////////////////
@@ -31,23 +31,23 @@ BEGIN
         BEGIN
 #ifdef EXPERIMENTAL_DA        
             VALUE "CompanyName", "Extended Audacity Team"
-            VALUE "FileDescription", "A customised Audacity® Cross-Platform Sound Editor"
+            VALUE "FileDescription", "A customised Audacityï¿½ Cross-Platform Sound Editor"
             VALUE "FileVersion", AUDACITY_FILE_VERSION
             VALUE "InternalName", "DarkAudacity"
-            VALUE "LegalCopyright", "Copyright © 2018. All rights reserved."
-            VALUE "LegalTrademarks", "Audacity® is a registered trademark of Dominic Mazzoni."
+            VALUE "LegalCopyright", "Copyright ï¿½ 2018. All rights reserved."
+            VALUE "LegalTrademarks", "Audacityï¿½ is a registered trademark of Dominic Mazzoni."
             VALUE "OriginalFilename", "DarkAudacity.exe"
             VALUE "ProductName", "DarkAudacity"
             VALUE "ProductVersion", AUDACITY_FILE_VERSION
 #else
-            VALUE "CompanyName", "Audacity Team"
-            VALUE "FileDescription", "Audacity® Cross-Platform Sound Editor"
+            VALUE "CompanyName", "Tenacity and Audacity Team Contributors"
+            VALUE "FileDescription", "Tenacity Cross-Platform Sound Editor"
             VALUE "FileVersion", AUDACITY_FILE_VERSION
-            VALUE "InternalName", "Audacity"
-            VALUE "LegalCopyright", "Copyright © 2018. All rights reserved."
-            VALUE "LegalTrademarks", "Audacity® is a registered trademark of Dominic Mazzoni."
-            VALUE "OriginalFilename", "Audacity.exe"
-            VALUE "ProductName", "Audacity"
+            VALUE "InternalName", "Tenacity"
+            VALUE "LegalCopyright", "Copyright ï¿½ 2018 under GPLv2"
+            VALUE "LegalTrademarks", "Audacityï¿½ is a registered trademark of Dominic Mazzoni."
+            VALUE "OriginalFilename", "Tenacity.exe"
+            VALUE "ProductName", "Tenacity"
             VALUE "ProductVersion", AUDACITY_FILE_VERSION
 #endif            
         END
