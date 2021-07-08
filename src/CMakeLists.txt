@@ -1217,7 +1217,7 @@ elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
       TARGET
          ${TARGET}
       COMMAND
-         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/Audacity"
+         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/Tenacity"
                           -D DST="${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
@@ -1279,14 +1279,14 @@ else()
    endif()
 
    # Create the desktop file
-   configure_file( audacity.desktop.in ${_INTDIR}/audacity.desktop )
+   configure_file( audacity.desktop.in ${_INTDIR}/tenacity.desktop )
 
    # Copy the required wxWidgets libs into the bundle
    add_custom_command(
       TARGET
          ${TARGET}
       COMMAND
-         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/audacity"
+         ${CMAKE_COMMAND} -D SRC="${_EXEDIR}/tenacity"
                           -D DST="${_DEST}/${_PKGLIB}"
                           -D WXWIN="${_SHARED_PROXY_BASE_PATH}/$<CONFIG>"
                           -P ${AUDACITY_MODULE_PATH}/CopyLibs.cmake
@@ -1361,7 +1361,7 @@ else()
                DESTINATION "${_LIBDIR}"
                USE_SOURCE_PERMISSIONS
                FILES_MATCHING PATTERN "*.so*" )
-      install( FILES "${_INTDIR}/audacity.desktop"
+      install( FILES "${_INTDIR}/tenacity.desktop"
                DESTINATION "${_DATADIR}/applications" )
       install( FILES "${topdir}/LICENSE.txt" "${topdir}/README.md"
                DESTINATION "${_DATADIR}/doc/${AUDACITY_NAME}" )

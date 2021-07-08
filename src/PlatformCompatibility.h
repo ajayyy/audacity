@@ -35,7 +35,7 @@ public:
 
    //
    // Get filename and path of executable (e.g. "/usr/bin/audacity" on
-   // Linux or "C:\Program Files\Audacity\Audacity.exe" on Windows)
+   // Linux or "C:\Program Files\Tenacity\Tenacity.exe" on Windows)
    // This string is unchanging
    //
    static const FilePath &GetExecutablePath();
