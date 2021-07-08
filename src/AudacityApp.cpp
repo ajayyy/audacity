@@ -1531,7 +1531,7 @@ bool AudacityApp::InitPart2()
    bool permsReset = false;
    gPrefs->Read(wxT("/MicrophonePermissionsReset"), &permsReset, false);
    if (!permsReset) {
-      system("tccutil reset Microphone org.audacityteam.audacity");
+      system("tccutil reset Microphone org.tenacityaudio.tenacity");
       gPrefs->Write(wxT("/MicrophonePermissionsReset"), true);
    }
 #endif
@@ -2425,7 +2425,7 @@ void AudacityApp::AssociateFileTypes()
       }
 
       if (!associateFileTypes.Exists() ||
-            (tmpRegAudPath.Find(wxT("audacity.exe")) >= 0))
+            (tmpRegAudPath.Find(wxT("tenacity.exe")) >= 0))
       {
          associateFileTypes.Create(true);
          associateFileTypes = (wxString)argv[0] + (wxString)wxT(" \"%1\"");
