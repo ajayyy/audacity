@@ -5,7 +5,7 @@ AudacityLogo ICON "audacity.ico"
 #endif
 
 #include <winuser.h>
-CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Tenacity.exe.manifest"
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Audacity.exe.manifest"
 
 #include "wx/msw/wx.rc"
 /////////////////////////////////////////////////////////////////////////////
