@@ -1,4 +1,4 @@
-#ifdef EXPERIMENTAL_DA
+﻿#ifdef EXPERIMENTAL_DA
 AudacityLogo ICON "darkaudacity.ico"
 #else
 AudacityLogo ICON "audacity.ico"
