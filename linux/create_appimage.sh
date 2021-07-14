@@ -80,8 +80,8 @@ linuxdeploy --list-plugins
 
 ln -sf --no-dereference . "${appdir}/usr"
 ln -sf share/applications/tenacity.desktop "${appdir}/tenacity.desktop"
-ln -sf share/icons/hicolor/scalable/apps/audacity.svg "${appdir}/audacity.svg"
-ln -sf share/icons/hicolor/scalable/apps/audacity.svg "${appdir}/.DirIcon"
+ln -sf share/icons/hicolor/scalable/apps/tenacity.svg "${appdir}/tenacity.svg"
+ln -sf share/icons/hicolor/scalable/apps/tenacity.svg "${appdir}/.DirIcon"
 
 #============================================================================
 # Bundle dependencies
