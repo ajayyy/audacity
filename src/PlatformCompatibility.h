@@ -34,7 +34,7 @@ public:
    static FilePath GetLongFileName(const FilePath& shortFileName);
 
    //
-   // Get filename and path of executable (e.g. "/usr/bin/audacity" on
+   // Get filename and path of executable (e.g. "/usr/bin/tenacity" on
    // Linux or "C:\Program Files\Tenacity\Tenacity.exe" on Windows)
    // This string is unchanging
    //
