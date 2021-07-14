@@ -399,7 +399,7 @@ Changes in version 2.1.3:
    * Upgraded the PortAudio library to v19 rev r1966.  This gives Audacity
      Windows 10 support.
    * (Windows) DirectSound now records 24-bit samples.
-   * (macOS) Tenacity.app now has its resources inside it rather than in a
+   * (macOS) Audacity.app now has its resources inside it rather than in a
      separate folder, so installation to /Applications/ is cleaner.
    * (macOS) Audacity 2.1.3 provides partial support for Sierra. Details at
      http://wiki.audacityteam.org/wiki/Partial_Support_for_Mac_Sierra_in_2.1.3 .
@@ -2142,7 +2142,7 @@ Changes in 1.2.0-pre4:
     while recording it) if your hardware device supports it.
 
   * Mac OS X: Audacity is now a package (you can right-click on
-    Tenacity.app and select 'Show Package Contents').  Launch time
+    Audacity.app and select 'Show Package Contents').  Launch time
     has improved significantly.
 
   * MS Windows: Fixed problem that caused Windows XP to use
