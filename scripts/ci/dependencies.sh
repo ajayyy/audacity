@@ -41,6 +41,9 @@ else # Linux & others
             libgtk2.0-dev
             gettext
             python3-pip
+
+            libwxgtk-webview3.0-gtk3-0v5
+            libwxgtk-media3.0-gtk3-0v5
         )
         sudo apt-get update -y
         sudo apt-get install -y --no-install-recommends "${apt_packages[@]}"
