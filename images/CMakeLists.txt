@@ -10,9 +10,9 @@ def_vars()
 
 list( APPEND PIXMAPS
    ${_SRCDIR}/gnome-mime-application-x-audacity-project.xpm
-   ${_SRCDIR}/icons/16x16/audacity16.xpm
-   ${_SRCDIR}/icons/32x32/audacity32.xpm
-   ${_SRCDIR}/icons/48x48/audacity.xpm
+   ${_SRCDIR}/icons/16x16/tenacity16.xpm
+   ${_SRCDIR}/icons/32x32/tenacity32.xpm
+   ${_SRCDIR}/icons/48x48/tenacity.xpm
 )
 
 if( NOT CMAKE_SYSTEM_NAME MATCHES "Darwin" )
