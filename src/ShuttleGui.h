@@ -255,7 +255,7 @@ public:
    void AddPrompt(const TranslatableString &Prompt, int wrapWidth = 0);
    void AddUnits(const TranslatableString &Prompt, int wrapWidth = 0);
    void AddTitle(const TranslatableString &Prompt, int wrapWidth = 0);
-   wxWindow * AddWindow(wxWindow * pWindow);
+   wxWindow * AddWindow(wxWindow* pWindow, int PositionFlags = wxALIGN_CENTRE);
    wxSlider * AddSlider(
       const TranslatableString &Prompt, int pos, int Max, int Min = 0);
    wxSlider * AddVSlider(const TranslatableString &Prompt, int pos, int Max);
@@ -347,10 +347,14 @@ public:
 //   and create the appropriate widget.
    void StartHorizontalLay(int PositionFlags=wxALIGN_CENTRE, int iProp=1);
    void EndHorizontalLay();
+
    void StartVerticalLay(int iProp=1);
    void StartVerticalLay(int PositionFlags, int iProp);
-
    void EndVerticalLay();
+
+   void StartWrapLay(int PositionFlags=wxEXPAND, int iProp = 0);
+   void EndWrapLay();
+
    wxScrolledWindow * StartScroller(int iStyle=0);
    void EndScroller();
    wxPanel * StartPanel(int iStyle=0);
@@ -482,6 +486,7 @@ public:
       const int min);
 //-- End of variants.
    void SetBorder( int Border ) {miBorder = Border;};
+   int GetBorder() const noexcept;
    void SetSizerProportion( int iProp ) {miSizerProp = iProp;};
    void SetStretchyCol( int i );
    void SetStretchyRow( int i );
@@ -616,6 +621,14 @@ enum
    eCloseID       = wxID_CANCEL
 };
 
+enum
+{
+    // Prop() sets the proportion value, defined as in wxSizer::Add().
+    // These are enum values for representing the magic values better
+    MINIMUM_PROPORTION = 0,
+    GROWING_PROPORTION = 1
+};
+
 AUDACITY_DLL_API std::unique_ptr<wxSizer> CreateStdButtonSizer( wxWindow *parent,
                                long buttons = eOkButton | eCancelButton,
                                wxWindow *extra = NULL );
@@ -717,7 +730,7 @@ public:
 
    // Prop() sets the proportion value, defined as in wxSizer::Add().
    ShuttleGui & Prop( int iProp ){ ShuttleGuiBase::Prop(iProp); return *this;}; // Has to be here too, to return a ShuttleGui and not a ShuttleGuiBase.
-
+   
    ShuttleGui & Style( long iStyle )
    {
       std::move( mItem ).Style( iStyle );

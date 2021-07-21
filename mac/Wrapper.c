@@ -1,10 +1,9 @@
 /**********************************************************************
 
-  Audacity: A Digital Audio Editor
+  Tenacity: A Digital Audio Editor
 
   Wrapper.c
 
-  Audacity(R) is copyright (c) 2020-2020 Audacity Team.
   License: GPL v2.  See License.txt.
 
 *******************************************************************//**

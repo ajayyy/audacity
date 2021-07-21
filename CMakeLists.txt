@@ -8,7 +8,7 @@ cmake_minimum_required( VERSION 3.15 )
 # If building with GNU compiler, then must be 4.9 or later.
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND
     CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.9")
-   message(FATAL_ERROR "Audacity requires at least GCC 4.9")
+   message(FATAL_ERROR "Tenacity requires at least GCC 4.9")
 endif ()
 
 # We only do alpha builds, beta builds, and release versions.
@@ -98,10 +98,10 @@ endif()
 # Add our module path
 # CMAKE_BINARY_DIR is required for Conan to work
 set( AUDACITY_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-proxies/cmake-modules")
-set( CMAKE_MODULE_PATH 
+set( CMAKE_MODULE_PATH
    ${AUDACITY_MODULE_PATH}
    ${CMAKE_BINARY_DIR}
-   ${CMAKE_MODULE_PATH} 
+   ${CMAKE_MODULE_PATH}
 )
 
 set( CMAKE_PREFIX_PATH
@@ -136,11 +136,6 @@ elseif( SCCACHE_PROGRAM )
 else()
    message( STATUS "Could NOT find ccache nor sccache, no compiler caching enabled" )
 endif()
-
-# Audacity sets this `audacity_` to prefix all CMake options which is not needed and this is not Audacity.
-# Keep this CMake variable here instead of removing it from the rest of the CMake code to minimize merge
-# conflicts with Audacity.
-set( _OPT "" )
 
 # Our very own project
 project( Tenacity )
@@ -205,10 +200,10 @@ message( STATUS "  Compiler Standard Required: ${CMAKE_CXX_STANDARD_REQUIRED}" )
 message( STATUS "  Compiler Extensions: ${CMAKE_CXX_EXTENSIONS}" )
 message( STATUS )
 
-if( CMAKE_GENERATOR MATCHES "Visual Studio" )
+if( MSVC )
    message( STATUS "  MSVC Version: ${MSVC_VERSION}" )
    message( STATUS "  MSVC Toolset: ${MSVC_TOOLSET_VERSION}" )
-   message( STATUS ) 
+   message( STATUS )
 elseif( CMAKE_SYSTEM_NAME MATCHES "Darwin" )
    if( CMAKE_GENERATOR MATCHES "Xcode" )
       message( STATUS "  Xcode Version: ${XCODE_VERSION}" )
@@ -226,7 +221,7 @@ find_package( Git QUIET )
 if( GIT_FOUND )
    execute_process(
       COMMAND
-         ${GIT_EXECUTABLE} show -s "--format=%h;%H;%cd"
+         ${GIT_EXECUTABLE} show -s "--format=%h;%H;%cd" --no-show-signature --no-notes
       WORKING_DIRECTORY
          ${topdir}
       OUTPUT_VARIABLE
@@ -248,7 +243,7 @@ message( STATUS )
 set_property( GLOBAL PROPERTY USE_FOLDERS ON )
 
 if( CMAKE_GENERATOR MATCHES "Visual Studio" )
-   # Make sure Audacity is the startup project
+   # Make sure Tenacity is the startup project
    set_directory_properties(
       PROPERTIES
          VS_STARTUP_PROJECT "${CMAKE_PROJECT_NAME}"
