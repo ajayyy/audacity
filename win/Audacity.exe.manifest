@@ -3,7 +3,7 @@
   <assemblyIdentity
       version="2.3.0.0"
       processorArchitecture="x86"
-      name="Audacity.Audacity.Audacity"
+      name="Tenacity.Tenacity.Tenacity"
       type="win32"
   />
   <description>Tenacity Cross-Platform Sound Editor</description>
