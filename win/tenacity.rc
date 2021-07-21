@@ -51,11 +51,11 @@ BEGIN
             VALUE "CompanyName", "Extended Tenacity Contributors"
             VALUE "FileDescription", "A customised Tenacity Cross-Platform Sound Editor"
             VALUE "FileVersion", AUDACITY_FILE_VERSION
-            VALUE "InternalName", "DarkAudacity"
+            VALUE "InternalName", "DarkTenacity"
             VALUE "LegalCopyright", "Copyright © 1999-2021 under GPLv2+"
-            VALUE "LegalTrademarks", "Audacity® is a registered trademark of Dominic Mazzoni."
-            VALUE "OriginalFilename", "DarkAudacity.exe"
-            VALUE "ProductName", "DarkAudacity"
+            VALUE "LegalTrademarks", ""
+            VALUE "OriginalFilename", "DarkTenacity.exe"
+            VALUE "ProductName", "DarkTenacity"
             VALUE "ProductVersion", AUDACITY_FILE_VERSION
 #else
             VALUE "CompanyName", "Tenacity Contributors"
@@ -63,7 +63,7 @@ BEGIN
             VALUE "FileVersion", AUDACITY_FILE_VERSION
             VALUE "InternalName", "Tenacity"
             VALUE "LegalCopyright", "Copyright © 1999-2021 under GPLv2+"
-            VALUE "LegalTrademarks", "Audacity® is a registered trademark of Dominic Mazzoni."
+            VALUE "LegalTrademarks", ""
             VALUE "OriginalFilename", "Tenacity.exe"
             VALUE "ProductName", "Tenacity"
             VALUE "ProductVersion", AUDACITY_FILE_VERSION
